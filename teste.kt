@@ -1,3 +1,3 @@
 fun main() {
-    println("aaaaa")
+    println("tá testado")
 }
