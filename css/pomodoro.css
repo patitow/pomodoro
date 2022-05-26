@@ -1,34 +1,54 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: black;  
-  }
-  
-  body {
-    align-self: center;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-size: cover; 
-    height: 100vh;
-    
-  }
-  
-  .contador {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0%;
-    font-size: 15vh;
-    font-weight: 400;
-    font-family: Roboto Mono;
-    padding: 0%
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
-  #logo {
-    box-sizing: border-box;
-    padding: 3.5% 5% 0% 5%;
-    max-width: 25%;
-    height: auto;
-  }
+body {
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#logo {
+  box-sizing: border-box;
+  padding: 3.5% 5% 0% 5%;
+  max-width: 25%;
+  height: auto;
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0%;
+  font-size: 15vh;
+  font-weight: 400;
+  font-family: Roboto Mono;
+  padding: 0%;
+  color: #3A3A3A;
+}
+
+.controlecontador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #333333;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 2vh;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 15px;
+  margin: 2vh;
+}
+
+.button:active {
+  background-color: #252525;
+}
