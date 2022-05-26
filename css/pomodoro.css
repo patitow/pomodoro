@@ -15,19 +15,20 @@
     
   }
   
-  .title {
+  .contador {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 10% 1% 2% 1%;
-    font-size: 200%;
-    font-weight: 600;
-    font-family: Roboto;
-    color: #fff;
+    align-items: flex-start;
+    margin: 0%;
+    font-size: 15vh;
+    font-weight: 400;
+    font-family: Roboto Mono;
+    padding: 0%
   }
-  
+
   #logo {
-    padding: 4% 5% 1%;
+    box-sizing: border-box;
+    padding: 3.5% 5% 0% 5%;
     max-width: 25%;
     height: auto;
   }
