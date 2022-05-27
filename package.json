@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "kotlinx-html": "^0.7.2"
+  }
+}
