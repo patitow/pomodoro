@@ -5,10 +5,18 @@ var main = function (_, Kotlin) {
   'use strict';
   var println = Kotlin.kotlin.io.println_s8jyv4$;
   var throwCCE = Kotlin.throwCCE;
+  var Unit = Kotlin.kotlin.Unit;
+  var print = Kotlin.kotlin.io.print_s8jyv4$;
   var pause;
   function btnClick() {
     println('Hello, World!');
     contador(1500);
+  }
+  function contador$lambda(closure$t) {
+    return function () {
+      contador(closure$t - 1 | 0);
+      return Unit;
+    };
   }
   function contador(t) {
     var tmp$, tmp$_0, tmp$_1, tmp$_2, tmp$_3;
@@ -37,11 +45,11 @@ var main = function (_, Kotlin) {
         texto_2.textContent = ':' + sec_0;
         divcontador.append(texto_2);
       }
-      contador(t - 1 | 0);
+      window.setTimeout(contador$lambda(t), 1000);
     }
   }
   function main() {
-    println('Hello, World!');
+    print('Hello World');
   }
   Object.defineProperty(_, 'pause', {
     get: function () {

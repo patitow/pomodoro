@@ -1,5 +1,4 @@
 import kotlinx.browser.*
-import kotlinx.coroutines.*
 import org.w3c.dom.*
 
 var pause: Boolean = false
@@ -42,17 +41,9 @@ fun contador(t:Int){
 			texto.textContent = ":${sec}" 
 			divcontador.append(texto)
 		}
-		
-		contador(t-1)
+		window.setTimeout({contador(t-1)}, 1000)
 	}}
 
-fun main() = runBlocking { // this: CoroutineScope
-    launch { doWorld() }
-    println("Hello")
-}
-
-// this is your first suspending function
-suspend fun doWorld() {
-    delay(1000L)
-    println("World!")
+fun main(){
+    print("Hello World")
 }
