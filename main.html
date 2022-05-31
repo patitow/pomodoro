@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P o m o d o r o</title>
     <link rel="icon" href="svg/pomodoro.svg" />
-    <script type="text/javascript" src="timer.js"></script>
   </head>
 
   <body>
@@ -16,13 +15,22 @@
     </div>
     <br />
     <div class="contador">
-      <div id="time">25:00</div>
+      <p id="time">25:00</p>
     </div>
     <div>
       <div class="controlecontador">
-        <img class="button" src="svg/restart.svg" />
-        <img class="button" src="svg/play.svg" />
+        <img id="restart" 
+            class="button" 
+            src="svg/restart.svg" />
+        <img id="play"
+            onclick="main.btnClick()"
+            class="button" 
+            src="svg/play.svg" />
       </div>
     </div>
+
+    <script src="scripts/kotlin.js"></script>
+    <script src="scripts/main.js"></script>
+
   </body>
 </html>
