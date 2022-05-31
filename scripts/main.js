@@ -14,7 +14,6 @@ var main = function (_, Kotlin) {
     var welcomeArea = Kotlin.isType(tmp$ = document.querySelector('div.contador'), HTMLDivElement) ? tmp$ : throwCCE();
     var str = ((t - t % 60 | 0) / 60 | 0).toString() + ':' + t % 60;
     welcomeArea.textContent = str;
-    welcomeArea.classList.remove('disabled');
   }
   function main() {
     println('Hello, World!');
