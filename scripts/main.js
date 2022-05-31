@@ -6,11 +6,40 @@ var main = function (_, Kotlin) {
   var println = Kotlin.kotlin.io.println_s8jyv4$;
   var throwCCE = Kotlin.throwCCE;
   var Unit = Kotlin.kotlin.Unit;
-  var print = Kotlin.kotlin.io.print_s8jyv4$;
-  var pause;
+  var tempo;
+  var controle;
   function btnClick() {
-    println('Hello, World!');
-    contador(1500);
+    println(controle);
+    if (controle === 0) {
+      contador(tempo);
+      changePauseButton();
+      controle = controle + 1 | 0;
+    } else if (controle === 1) {
+      changePlayButton();
+      controle = controle + 1 | 0;
+    } else if (controle >= 2) {
+      controle = 1;
+      changePauseButton();
+      contador(tempo);
+    }
+  }
+  function reset() {
+    var tmp$;
+    tempo = 1500;
+    controle = 2;
+    var divcontador = Kotlin.isType(tmp$ = document.querySelector('div.contador'), HTMLDivElement) ? tmp$ : throwCCE();
+    divcontador.textContent = '25:00';
+    changePlayButton();
+  }
+  function changePauseButton() {
+    var tmp$;
+    var divcontador = Kotlin.isType(tmp$ = document.getElementById('play'), HTMLImageElement) ? tmp$ : throwCCE();
+    divcontador.src = 'svg/pause.svg';
+  }
+  function changePlayButton() {
+    var tmp$;
+    var divcontador = Kotlin.isType(tmp$ = document.getElementById('play'), HTMLImageElement) ? tmp$ : throwCCE();
+    divcontador.src = 'svg/play.svg';
   }
   function contador$lambda(closure$t) {
     return function () {
@@ -21,7 +50,10 @@ var main = function (_, Kotlin) {
   function contador(t) {
     var tmp$, tmp$_0, tmp$_1, tmp$_2, tmp$_3;
     var divcontador = Kotlin.isType(tmp$ = document.querySelector('div.contador'), HTMLDivElement) ? tmp$ : throwCCE();
-    if (t >= 0 && !pause) {
+    println(controle);
+    if (t < 0 || controle === 2) {
+      println('Encerrou');
+    } else {
       divcontador.textContent = '';
       if (((t - t % 60 | 0) / 60 | 0) < 10) {
         var min = '0' + ((t - t % 60 | 0) / 60 | 0);
@@ -45,25 +77,33 @@ var main = function (_, Kotlin) {
         texto_2.textContent = ':' + sec_0;
         divcontador.append(texto_2);
       }
+      tempo = t;
       window.setTimeout(contador$lambda(t), 1000);
     }
   }
-  function main() {
-    print('Hello World');
-  }
-  Object.defineProperty(_, 'pause', {
+  Object.defineProperty(_, 'tempo', {
     get: function () {
-      return pause;
+      return tempo;
     },
     set: function (value) {
-      pause = value;
+      tempo = value;
+    }
+  });
+  Object.defineProperty(_, 'controle', {
+    get: function () {
+      return controle;
+    },
+    set: function (value) {
+      controle = value;
     }
   });
   _.btnClick = btnClick;
+  _.rstClick = reset;
+  _.changePauseButton = changePauseButton;
+  _.changePlayButton = changePlayButton;
   _.contador_za3lpa$ = contador;
-  _.main = main;
-  pause = false;
-  main();
+  tempo = 1500;
+  controle = 0;
   Kotlin.defineModule('main', _);
   return _;
 }(typeof main === 'undefined' ? {} : main, kotlin);
