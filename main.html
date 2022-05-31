@@ -15,15 +15,22 @@
     </div>
     <br />
     <div class="contador">
-      <div id="minutos">25</div>
-      <div>:</div>
-      <div id="segundos">00</div>
+      <p id="time">25:00</p>
     </div>
     <div>
       <div class="controlecontador">
-        <img class="button" src="svg/restart.svg" />
-        <img class="button" src="svg/play.svg" />
+        <img id="restart" 
+            class="button" 
+            src="svg/restart.svg" />
+        <img id="play"
+            onclick="main.btnClick()"
+            class="button" 
+            src="svg/play.svg" />
       </div>
     </div>
+
+    <script src="scripts/kotlin.js"></script>
+    <script src="scripts/main.js"></script>
+
   </body>
 </html>
