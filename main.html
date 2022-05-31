@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="css/pomodoro.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P o m o d o r o</title>
+    <link rel="icon" href="svg/pomodoro.svg" />
+  </head>
+
+  <body>
+    <div class="flex-header">
+      <div id="logo"><img src="svg/pomodoro.svg" /></div>
+      <div></div>
+    </div>
+    <br />
+    <div class="contador">
+      <p id="time">25:00</p>
+    </div>
+    <div>
+      <div class="controlecontador">
+        <img id="restart" 
+            onclick="main.rstClick()"
+            class="button"
+            src="svg/restart.svg" />
+        <img id="play"
+            onclick="main.btnClick()"
+            class="button"
+            src="svg/play.svg" />
+      </div>
+    </div>
+
+    <script src="scripts/kotlin.js"></script>
+    <script src="scripts/main.js"></script>
+
+  </body>
+</html>
