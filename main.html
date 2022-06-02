@@ -14,9 +14,11 @@
       <div></div>
     </div>
     <br />
+
     <div class="contador">
       <p id="time">25:00</p>
     </div>
+
     <div>
       <div class="controlecontador">
         <img id="restart" 
@@ -29,6 +31,69 @@
             src="svg/play.svg" />
       </div>
     </div>
+
+		<div class="downpart">
+
+      <div class="conteudo">
+				<div class="topo">
+					<input type="text"
+						id="inputNovaTarefa"
+						placeholder="Insira a tarefa aqui"
+					>
+					<img id="btnAddTarefa" 
+            class="button"
+            src="svg/add.svg" />	
+				</div>
+				<div class="listcontainer">
+
+					<div class="listTarefa">
+						<div class="itemContent">
+						Exemplo de Tarefa 1
+						</div>
+						<img id="btnRemoveTarefa" 
+            			class="button"
+            			src="svg/remove.svg" />
+					</div>
+					<div class="listTarefa">
+						<div class="itemContent">
+						Exemplo de Tarefa 2
+						</div>
+						<img id="btnRemoveTarefa" 
+            			class="button"
+            			src="svg/remove.svg" />
+					</div>
+					<div class="listTarefa">
+						<div class="itemContent">
+						Exemplo de Tarefa 3
+						</div>
+						<img id="btnRemoveTarefa" 
+            			class="button"
+            			src="svg/remove.svg" />
+					</div>
+
+				</div>
+				
+			</div>
+
+			<div class="breaks">
+				<div class="breakitem">
+					Shortbreaks
+					<div id="shortbreaks">
+						0
+					</div>
+				</div>
+
+				<div class="breakitem">
+					Longbreaks
+					<div id="longbreaks">
+						0
+					</div>
+				</div>
+				
+			</div>
+
+    </div>
+    
 
     <script src="scripts/kotlin.js"></script>
     <script src="scripts/main.js"></script>
