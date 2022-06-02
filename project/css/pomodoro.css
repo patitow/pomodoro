@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#logo {
+  box-sizing: border-box;
+  padding: 3.5% 5% 0% 5%;
+  max-width: 25%;
+  height: auto;
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0%;
+  font-size: 7vw;
+  font-weight: 400;
+  font-family: Roboto Mono;
+  padding: 0%;
+  color: #3A3A3A;
+}
+
+.controlecontador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #333333;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 1vw;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 1vw;
+  margin: 1vw;
+}
+
+.button:hover{
+  background-color: #404040;
+}
+
+.button:active {
+  background-color: #252525;
+}
+
+.addtarefa {
+  background-color: #666666;
+}
+
+.downpart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+.conteudo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #333333;
+  box-sizing: border-box;
+  border-radius: 1vw;
+  font-family: Roboto;
+}
+
+.topo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw 1vw 1vw 1vw;
+}
+
+#inputNovaTarefa{
+  border-radius: 0.25vw;
+  padding: 1vw;
+  margin: 0.5vw 0.5vw 0vw 0vw;
+  outline: none;
+  font-size: 1.5vw;
+  font-weight: 400;
+  background-color: #666666;
+  color: white;
+  border: none;
+}
+
+::placeholder{
+  color: white;
+}
+
+#btnAddTarefa{
+  background-color: #666666;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0.5vh;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 0.5vh;
+  margin: 0vw 0vw 0vw 0.5vw;
+}
+
+#btnAddTarefa:hover{
+  background-color: #707070;
+}
+
+#btnAddTarefa:active {
+  transform: scale(1.05);
+  background-color: #666666;
+}
+
+.listcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0vw 1vw 0vw 1vw;
+  margin: 0vw 0vw 1vw 0vw ;
+}
+
+.listTarefa{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing:border-box;
+  border-radius: 0.25vw;
+  padding: 1vw;
+  margin: 0.5vw;
+  width: 100%;
+  font-size: 1.5vw;
+  font-weight: 400;
+  background-color: #666666;
+  color: white;
+}
+
+.itemContent{
+  align-self: center;
+  align-items: center;
+  flex-grow: 2;
+  font-size: 1.5vw;
+  font-weight: 400;
+  background-color: #666666;
+  color: white;
+}
+
+#btnRemoveTarefa{
+  align-self: flex-end;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0.7vh;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 0.5vh;
+  margin: 0vw 0vw 0vw 0vw;
+  background-color: #666666;
+}
+
+#btnRemoveTarefa:active {
+  transform: scale(1.15);
+}
+
+.breaks{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #333333;
+  box-sizing: border-box;
+  border-radius: 1vw;
+  margin: 1vw;
+}
+
+.breakitem{
+  background-color: #666666;
+  font-size: 1.5vw;
+  font-weight: 400;
+  font-family: Roboto;
+  color:white;
+  box-sizing: border-box;
+  border-radius: 1vw;
+  padding: 1vw;
+  margin: 1vw;
+}
