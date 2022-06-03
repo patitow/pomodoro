@@ -28,6 +28,12 @@ fun main() {
             }
          } 
 
+         // Rota de testes
+         route("/teste", HttpMethod.Get) {
+            files("project/")
+            default("project/teste.html")
+         }
+
          // Rota principal
          route("/", HttpMethod.Get) {
             files("project/")
