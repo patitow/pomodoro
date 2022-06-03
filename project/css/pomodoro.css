@@ -108,8 +108,8 @@ body {
   cursor: pointer;
   box-sizing: border-box;
   padding: 0.5vh;
-  width: 3vh;
-  height: 3vh;
+  width: 4vh;
+  height: 4vh;
   border-radius: 0.5vh;
   margin: 0vw 0vw 0vw 0.5vw;
 }
@@ -163,9 +163,9 @@ body {
   align-self: flex-end;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 0.7vh;
-  width: 3vh;
-  height: 3vh;
+  padding: 1vh;
+  width: 4vh;
+  height: 4vh;
   border-radius: 0.5vh;
   margin: 0vw 0vw 0vw 0vw;
   background-color: #666666;
