@@ -110,3 +110,5 @@ fun contador(t:Int){
 		window.setTimeout({contador(t-1)}, 1000)
 	}
 }
+
+//a
