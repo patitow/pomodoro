@@ -2,9 +2,49 @@ import kotlinx.browser.*
 import org.w3c.dom.*
 
 var lista = listOf("")
+var idcontroller=0
+
+var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
+
+inputNovaTarefa.addEventListener("onkeypress"){
+    listaAddTarefa()
+}
+
+
+
+
 
 @JsName("addTarefa")
 fun listaAddTarefa(){
+    var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
+    if(inputNovaTarefa.value!=""){
+        lista=add(lista,inputNovaTarefa.value)
+        print(lista)
+        criaTag(inputNovaTarefa.value)
+        inputNovaTarefa.value = ""
+    }
+}
+
+fun criaTag(str:String){
+    val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
+    val listaTarefas = document.createElement("div") as HTMLDivElement
+    listaTarefas.className = "listTarefa"
+    listContainer.className = "listcontainer"
+    val text= document.createElement("p") as HTMLParagraphElement
+    text.className = "itemContent"
+    val img= document.createElement("img") as HTMLImageElement
+    img.src="svg/remove.svg"
+    img.className = "btnRemoveTarefa"
+    img.id = gerarId()
+    img.onclick = listaremoveTarefa()
+    text.textContent = str 
+    listaTarefas.append(text)
+    listaTarefas.append(img)
+    listContainer.append(listaTarefas)
+}
+
+@JsName("removeTarefa")
+fun listaremoveTarefa(){
     var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
     lista=add(lista,inputNovaTarefa.value)
     print(lista)
@@ -12,13 +52,9 @@ fun listaAddTarefa(){
     inputNovaTarefa.value = ""
 }
 
-fun criaTag(str:String){
-    val listaTarefas = document.querySelector("div.listcontainer") as HTMLDivElement
-    listaTarefas.className = "listcontainer"
-    val text= document.createElement("p") as HTMLParagraphElement
-    text.className = "itemContent"
-    text.textContent = str 
-    listaTarefas!!.append(text)
+fun gerarId():String{
+    idcontroller+=1
+    return "idcontroller"
 }
 
 fun remove(l1:List<String>, indexof:Int):List<String>{
