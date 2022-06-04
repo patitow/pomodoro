@@ -13,38 +13,12 @@ fun listaAddTarefa(){
 }
 
 fun criaTag(str:String){
-    var listaTarefas = document.querySelector("listcontainer")
-    //var li=document.createElement("li")
-    //li.classList.add("listTarefa")
-    
-    var div = document.createElement("div") as HTMLParagraphElement
-    div.classList.add("itemContent")
-    div.textContent = str
-    /*
-    var btnApagar=document.createElement("button") as HTMLButtonElement
-    btnApagar.classList.add("btnRemoveTarefa")
-
-    var img = document.createElement("img") as HTMLImageElement
-    img.src = "svg/remove.svg"
-
-    btnApagar.appendChild(img)
-    li.appendChild(div)
-    li.appendChild(btnApagar)*/
-
-
-    val btn = document.createbutton {
-    text("click me")
-    style = """
-             color: 0xffffff;
-             width: 10.px;
-             opacity: .8;
-             hover {
-                color : 0xf2cacf
-            }
-            """
-    }
-
-    listaTarefas.appendElement(btn)
+    val listaTarefas = document.querySelector("div.listcontainer") as HTMLDivElement
+    listaTarefas.className = "listcontainer"
+    val text= document.createElement("p") as HTMLParagraphElement
+    text.className = "itemContent"
+    text.textContent = str 
+    listaTarefas!!.append(text)
 }
 
 fun remove(l1:List<String>, indexof:Int):List<String>{

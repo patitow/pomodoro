@@ -20,12 +20,13 @@ var lista = function (_, Kotlin) {
     inputNovaTarefa.value = '';
   }
   function criaTag(str) {
-    var tmp$;
-    var listaTarefas = document.querySelector('listcontainer');
-    var div = Kotlin.isType(tmp$ = document.createElement('div'), HTMLParagraphElement) ? tmp$ : throwCCE();
-    div.classList.add('itemContent');
-    div.textContent = str;
-    ensureNotNull(listaTarefas).appendChild(div);
+    var tmp$, tmp$_0;
+    var listaTarefas = Kotlin.isType(tmp$ = document.querySelector('div.listcontainer'), HTMLDivElement) ? tmp$ : throwCCE();
+    listaTarefas.className = 'listcontainer';
+    var text = Kotlin.isType(tmp$_0 = document.createElement('p'), HTMLParagraphElement) ? tmp$_0 : throwCCE();
+    text.className = 'itemContent';
+    text.textContent = str;
+    ensureNotNull(listaTarefas).append(text);
   }
   function remove(l1, indexof) {
     return plus(dropLast(l1, l1.size - indexof | 0), drop(l1, indexof + 1 | 0));
