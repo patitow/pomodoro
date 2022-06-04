@@ -1,9 +1,9 @@
-# Kotin-Ktor-Webapp-FrontEnd-BackEnd
-Projeto de Aplicação Web de Pomodoro usando Ktor com exemplos em FrontEnd e BackEnd
+# P o m o d o r o
+Projeto de Aplicação Web de Pomodoro usando Ktor
 
 Os arquivos e pastas deste projeto:
 
-* __servidor.kt__: Código que executa o servidor Ktor e contém as páginas dinâmicas BackEnd
+* __servidor.kt__: Código que executa o servidor Ktor
 * __project__: Diretório de conteúdo estático.
 * __project/scripts/main.kt__: Exemplo de código que roda no navagador (FrontEnd)
 * __project/main.html__: Exemplo de página HTML que carrega um programa em JavaScript.
@@ -12,7 +12,7 @@ Os arquivos e pastas deste projeto:
 O projeto utiliza a linha de comando do linux para executar tais comandos.
 Para compilar o projeto utilize os seguintes comandos:
 
-Compila o servidor / página BackEnd:
+Compila o servidor:
 ```
 kotlinc -cp ktor.jar:. servidor.kt
 ```
