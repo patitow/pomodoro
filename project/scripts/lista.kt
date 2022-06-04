@@ -18,6 +18,8 @@ fun listaAddTarefa(){
 @JsName("resetlista")
 fun resetLista(){
     val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
+    var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
+    inputNovaTarefa.value = ""
     var close = document.getElementsByClassName("listTarefa")
     for (i in 0..close.length) {
         listContainer.innerHTML = ""

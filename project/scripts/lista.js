@@ -23,11 +23,13 @@ var lista = function (_, Kotlin) {
     }
   }
   function resetLista() {
-    var tmp$, tmp$_0;
+    var tmp$, tmp$_0, tmp$_1;
     var listContainer = Kotlin.isType(tmp$ = document.querySelector('div.listcontainer'), HTMLDivElement) ? tmp$ : throwCCE();
+    var inputNovaTarefa = Kotlin.isType(tmp$_0 = document.getElementById('inputNovaTarefa'), HTMLInputElement) ? tmp$_0 : throwCCE();
+    inputNovaTarefa.value = '';
     var close = document.getElementsByClassName('listTarefa');
-    tmp$_0 = close.length;
-    for (var i = 0; i <= tmp$_0; i++) {
+    tmp$_1 = close.length;
+    for (var i = 0; i <= tmp$_1; i++) {
       listContainer.innerHTML = '';
     }
   }
