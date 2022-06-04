@@ -76,7 +76,7 @@ button{
 .downpart{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1vh;
 }
 
@@ -85,7 +85,7 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  margin: 1vw;
   background-color: #333333;
   box-sizing: border-box;
   border-radius: 1vw;

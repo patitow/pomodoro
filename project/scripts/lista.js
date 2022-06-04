@@ -4,6 +4,7 @@ if (typeof kotlin === 'undefined') {
 var lista = function (_, Kotlin) {
   'use strict';
   var listOf = Kotlin.kotlin.collections.listOf_mh5how$;
+  var println = Kotlin.kotlin.io.println_s8jyv4$;
   var throwCCE = Kotlin.throwCCE;
   var equals = Kotlin.equals;
   var print = Kotlin.kotlin.io.print_s8jyv4$;
@@ -14,6 +15,7 @@ var lista = function (_, Kotlin) {
   var idcontroller;
   function listaAddTarefa() {
     var tmp$;
+    println('Come\xE7ando AddTarefa');
     var inputNovaTarefa = Kotlin.isType(tmp$ = document.getElementById('inputNovaTarefa'), HTMLInputElement) ? tmp$ : throwCCE();
     if (!equals(inputNovaTarefa.value, '')) {
       lista = add(lista, inputNovaTarefa.value);
@@ -21,9 +23,11 @@ var lista = function (_, Kotlin) {
       criaTag(inputNovaTarefa.value);
       inputNovaTarefa.value = '';
     }
+    println('Finalizando AddTarefa');
   }
   function criaTag(str) {
     var tmp$, tmp$_0, tmp$_1, tmp$_2;
+    println('Come\xE7ando Criatag');
     var listContainer = Kotlin.isType(tmp$ = document.querySelector('div.listcontainer'), HTMLDivElement) ? tmp$ : throwCCE();
     var listaTarefas = Kotlin.isType(tmp$_0 = document.createElement('div'), HTMLDivElement) ? tmp$_0 : throwCCE();
     listaTarefas.className = 'listTarefa';
@@ -38,6 +42,7 @@ var lista = function (_, Kotlin) {
     listaTarefas.append(text);
     listaTarefas.append(img);
     listContainer.append(listaTarefas);
+    println('Finalizando Criatag');
   }
   function listaremoveTarefa() {
     var tmp$;

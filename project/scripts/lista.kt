@@ -4,18 +4,9 @@ import org.w3c.dom.*
 var lista = listOf("")
 var idcontroller=0
 
-var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
-
-inputNovaTarefa.addEventListener("onkeypress"){
-    listaAddTarefa()
-}
-
-
-
-
-
 @JsName("addTarefa")
 fun listaAddTarefa(){
+    println("Começando AddTarefa")
     var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
     if(inputNovaTarefa.value!=""){
         lista=add(lista,inputNovaTarefa.value)
@@ -23,9 +14,11 @@ fun listaAddTarefa(){
         criaTag(inputNovaTarefa.value)
         inputNovaTarefa.value = ""
     }
+    println("Finalizando AddTarefa")
 }
 
 fun criaTag(str:String){
+    println("Começando Criatag")
     val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
     val listaTarefas = document.createElement("div") as HTMLDivElement
     listaTarefas.className = "listTarefa"
@@ -36,11 +29,11 @@ fun criaTag(str:String){
     img.src="svg/remove.svg"
     img.className = "btnRemoveTarefa"
     img.id = gerarId()
-    img.onclick = listaremoveTarefa()
     text.textContent = str 
     listaTarefas.append(text)
     listaTarefas.append(img)
     listContainer.append(listaTarefas)
+    println("Finalizando Criatag")
 }
 
 @JsName("removeTarefa")
