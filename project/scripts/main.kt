@@ -1,7 +1,7 @@
 import kotlinx.browser.*
 import org.w3c.dom.*
 
-var tempo: Int = 1500
+var tempo: Int = 5
 var controle:Int = 0
 var focos: Int = 1
 var shorts: Int = 0
@@ -90,7 +90,9 @@ fun contador(t:Int){
 			barra.style.backgroundColor = "#a1a1ff"
 			shorts+=1
 			tempo=300
-		}		
+		}
+		val quack = document.createElement("player")
+		quack.play()
 		controle=3
 		width = 0.00
 		btnClick()

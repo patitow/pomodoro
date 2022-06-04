@@ -97,6 +97,7 @@ var main = function (_, Kotlin) {
         shorts = shorts + 1 | 0;
         tempo = 300;
       }
+      document.createElement('autoplay');
       controle = 3;
       width = 0.0;
       btnClick();
@@ -218,7 +219,7 @@ var main = function (_, Kotlin) {
   _.changePauseButton = changePauseButton;
   _.changePlayButton = changePlayButton;
   _.contador_za3lpa$ = contador;
-  tempo = 1500;
+  tempo = 5;
   controle = 0;
   focos = 1;
   shorts = 0;
