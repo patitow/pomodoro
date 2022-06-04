@@ -28,6 +28,12 @@ Executa o servidor Web:
 ```
 kotlin -cp ktor.jar:. ServidorKt
 ```
+
+Para acessar o servidor, vá para:
+```
+localhost:3000
+```
+
 Observações: 
 1) Caso utilize o windows deverá colocar "ktor.jar" no lugar de ktor.jar
 2) Importar o arquivo "jar" pode gerar um warning de conflito de versões. Este warning pode ser ignorado.
