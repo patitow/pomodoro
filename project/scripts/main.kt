@@ -1,7 +1,7 @@
 import kotlinx.browser.*
 import org.w3c.dom.*
 
-var tempo: Int = 5
+var tempo: Int = 1500
 var controle:Int = 0
 var focos: Int = 1
 var shorts: Int = 0
