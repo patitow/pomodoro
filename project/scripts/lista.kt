@@ -9,9 +9,9 @@ fun listaAddTarefa(){
     var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
     if(inputNovaTarefa.value!=""){
         lista=add(lista,inputNovaTarefa.value)
-        print(lista)
         criaTag(inputNovaTarefa.value)
         inputNovaTarefa.value = ""
+        println("Lista: ${lista}")
     }
 }
 
@@ -26,6 +26,17 @@ fun resetLista(){
     }
 }
 
+@JsName("apagaTarefa")
+fun apagaTarefa(img:HTMLButtonElement){
+    println("Função chamada")
+    val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
+    listContainer.removeChild(img.parentElement!!.parentElement!!)
+    val conteudo=img.parentElement!!.parentElement!!.getElementsByClassName("itemContent")
+    val toRemove = lista.indexOf(conteudo.get(0)?.textContent)  
+    lista=remove(lista,toRemove)
+    println("Lista após remoção: ${lista}")
+}
+
 fun criaTag(str:String){
     val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
     val listaTarefas = document.createElement("div") as HTMLDivElement
@@ -33,19 +44,22 @@ fun criaTag(str:String){
     listContainer.className = "listcontainer"
     val text= document.createElement("p") as HTMLParagraphElement
     text.className = "itemContent"
-    val img= document.createElement("img") as HTMLImageElement
-    img.src="svg/remove.svg"
-    img.className = "btnRemoveTarefa"
-    img.id = gerarId()
-    //img.onclick = removeitem(img.id) nao funciona
+    val img= document.createElement("button") as HTMLButtonElement
+    img.innerHTML = """
+                        <button onclick="lista.apagaTarefa(this)">
+                        <img src=svg/remove.svg
+                             class="btnRemoveTarefa"
+                        ></button>
+                    """
     text.textContent = str 
+    text.id="texto"
     listaTarefas.append(text)
     listaTarefas.append(img)
     listContainer.append(listaTarefas)
 }
 
 fun gerarId():String{
-    idcontroller+=1 //placeholder
+    idcontroller++ //placeholder
     return "idcontroller"
 }
 
