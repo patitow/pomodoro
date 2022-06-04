@@ -39,42 +39,20 @@
 					<input type="text"
 						id="inputNovaTarefa"
 						placeholder="Insira a tarefa aqui"
-						onclick="main.addListClick()" 
 					>
+          <div class="listBtncontainer">
+            <img id="btnApagaLista"
+            onclick="lista.resetlista()"
+            class="button"
+            src="svg/remove.svg" />
 					<img id="btnAddTarefa" 
             class="button"
-            src="svg/add.svg" />	
+            src="svg/add.svg" 
+            onclick="lista.addTarefa()"
+            />
+          </div>
 				</div>
 				<div class="listcontainer">
-
-					<div class="listTarefa">
-						<div class="itemContent">
-						Exemplo de Tarefa 1
-						</div>
-						<img class="btnRemoveTarefa"
-						onclick="main.removeListClick()" 
-            			class="button"
-            			src="svg/remove.svg" />
-					</div>
-					<div class="listTarefa">
-						<div class="itemContent">
-						Exemplo de Tarefa 2
-						</div>
-						<img class="btnRemoveTarefa"
-						onclick="main.removeListClick()" 
-            			class="button"
-            			src="svg/remove.svg" />
-					</div>
-					<div class="listTarefa">
-						<div class="itemContent">
-						Exemplo de Tarefa 3
-						</div>
-						<img class="btnRemoveTarefa" 
-						onclick="main.removeListClick()" 
-            			class="button"
-            			src="svg/remove.svg" />
-					</div>
-
 				</div>
 				
 			</div>
@@ -106,7 +84,7 @@
     
 
     <script src="scripts/kotlin.js"></script>
-    <script src="scripts/main.js"></script>
-	
+	<script src="scripts/lista.js"></script>
+	<script src="scripts/main.js"></script>
   </body>
 </html>
