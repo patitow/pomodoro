@@ -6,7 +6,6 @@ var idcontroller=0
 
 @JsName("addTarefa")
 fun listaAddTarefa(){
-    println("Começando AddTarefa")
     var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
     if(inputNovaTarefa.value!=""){
         lista=add(lista,inputNovaTarefa.value)
@@ -14,11 +13,18 @@ fun listaAddTarefa(){
         criaTag(inputNovaTarefa.value)
         inputNovaTarefa.value = ""
     }
-    println("Finalizando AddTarefa")
+}
+
+@JsName("resetlista")
+fun resetLista(){
+    val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
+    var close = document.getElementsByClassName("listTarefa")
+    for (i in 0..close.length) {
+        listContainer.innerHTML = ""
+    }
 }
 
 fun criaTag(str:String){
-    println("Começando Criatag")
     val listContainer = document.querySelector("div.listcontainer") as HTMLDivElement
     val listaTarefas = document.createElement("div") as HTMLDivElement
     listaTarefas.className = "listTarefa"
@@ -29,24 +35,15 @@ fun criaTag(str:String){
     img.src="svg/remove.svg"
     img.className = "btnRemoveTarefa"
     img.id = gerarId()
+    //img.onclick = removeitem(img.id) nao funciona
     text.textContent = str 
     listaTarefas.append(text)
     listaTarefas.append(img)
     listContainer.append(listaTarefas)
-    println("Finalizando Criatag")
-}
-
-@JsName("removeTarefa")
-fun listaremoveTarefa(){
-    var inputNovaTarefa = document.getElementById("inputNovaTarefa") as HTMLInputElement
-    lista=add(lista,inputNovaTarefa.value)
-    print(lista)
-    criaTag(inputNovaTarefa.value)
-    inputNovaTarefa.value = ""
 }
 
 fun gerarId():String{
-    idcontroller+=1
+    idcontroller+=1 //placeholder
     return "idcontroller"
 }
 

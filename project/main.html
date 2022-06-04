@@ -40,11 +40,17 @@
 						id="inputNovaTarefa"
 						placeholder="Insira a tarefa aqui"
 					>
+          <div class="listBtncontainer">
+            <img id="btnApagaLista"
+            onclick="lista.resetlista()"
+            class="button"
+            src="svg/remove.svg" />
 					<img id="btnAddTarefa" 
             class="button"
             src="svg/add.svg" 
             onclick="lista.addTarefa()"
             />
+          </div>
 				</div>
 				<div class="listcontainer">
 				</div>
