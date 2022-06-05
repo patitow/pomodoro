@@ -32,8 +32,10 @@ var lista = function (_, Kotlin) {
     var close = document.getElementsByClassName('listTarefa');
     tmp$_1 = close.length;
     for (var i = 0; i <= tmp$_1; i++) {
+      lista = listOf('');
       listContainer.innerHTML = '';
     }
+    println('Lista ap\xF3s remo\xE7\xE3o: ' + lista);
   }
   function apagaTarefa(img) {
     var tmp$, tmp$_0;

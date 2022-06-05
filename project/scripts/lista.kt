@@ -22,8 +22,10 @@ fun resetLista(){
     inputNovaTarefa.value = ""
     var close = document.getElementsByClassName("listTarefa")
     for (i in 0..close.length) {
+        lista = listOf("")
         listContainer.innerHTML = ""
     }
+    println("Lista após remoção: ${lista}")
 }
 
 @JsName("apagaTarefa")
